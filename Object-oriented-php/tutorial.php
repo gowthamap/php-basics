@@ -1,33 +1,58 @@
 <?php
 
+// inheritance
 
-class Student {
-private $name;
-private $roll_number;
+class Vehicle {
+  protected $name;
+  protected $wheels;
+  protected $color;
 
-public function setName($n) {
-  $this->name = $n;
-}
+  function __construct(){
+    echo 'initialized Vehicle class';
+  }
 
-public function setRollNumber($r) {
-  $this->roll_number = $r;
-}
+  public function accelerate() {
+    echo "Accelerated vehicle";
+  }
 
-public function getName() { 
-  return $this->name;
-}
-
-public function getRollNumber() {
- return $this->roll_number;
-}
+  public function apply_break() {
+    echo "Break!!!";
+  }
 
 }
 
-$ob = new Student();
-$ob->setName("appu");
-$ob->setRollNumber(10);
+$ob = new Vehicle();
 
-echo $ob->getName();
-echo $ob->getRollNumber();
+class Car extends Vehicle {
+
+  function __construct(){
+    parent::__construct();
+    echo 'Initialize Car class';
+  }
+
+  protected $seat_belt;
+  protected $window;
+
+}
+
+class Bike extends Vehicle {
+
+  function __construct(){
+    parent::__construct();
+    echo 'Initialize Bike class';
+  }
+
+ protected $side_stand;
+}
+
+$bike_object = new Bike();
+echo $bike_object->accelerate();
+echo $bike_object->apply_break();
+
+$car_object = new Car();
+echo $car_object->accelerate();
+echo $car->object->apply_break();
+
+
 
  ?>
