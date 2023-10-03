@@ -2,38 +2,44 @@
 
 // Abstract class
 
-abstract class Vehicle {
-  protected $name;
-  protected $color;
+// interface
 
-  public function accelerate() {
-
-  }
-
-  public function apply_break() {
-
-  }
-
- abstract public function service();
+class Vehicle {
 
 }
 
+class Fan {
 
-class Car extends Vehicle {
-  public function service()
+}
+
+class Toy {
+
+}
+
+interface Charger {
+  public function recharge();
+}
+
+class ElectricCar extends Vehicle implements Charger {
+  public function recharge()
   {
     
   }
 }
 
-class Bike extends Vehicle {
-  public function service()
+class PortableFan extends Fan implements Charger {
+  public function recharge()
   {
     
   }
+
 }
 
-$ob = new Bike();
-
+class ElectricToy extends Toy implements Charger {
+  public function recharge()
+  {
+     
+  }
+}
 
  ?>
