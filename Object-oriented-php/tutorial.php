@@ -1,58 +1,26 @@
 <?php
 
-// inheritance
+class Book {
+  private $title;
+  private $price;
+  private $author;
 
-class Vehicle {
-  protected $name;
-  protected $wheels;
-  protected $color;
-
-  function __construct(){
-    echo 'initialized Vehicle class';
+  function __construct($title, $price, $author){
+    $this->title = $title;
+    $this->price = $price;
+    $this->author = $author;
   }
 
-  public function accelerate() {
-    echo "Accelerated vehicle";
-  }
-
-  public function apply_break() {
-    echo "Break!!!";
+  public function display() {
+    echo "Title: ".$this->title. "<br>Price :" .$this->price."<br>Author :".$this->author;
   }
 
 }
 
-$ob = new Vehicle();
+$balyakala_sakhi = new Book("Balyakala sakhi", 150, "Basheer");
+$mathilukal = new Book("mathilukal", 160, "Basheer");
 
-class Car extends Vehicle {
-
-  function __construct(){
-    parent::__construct();
-    echo 'Initialize Car class';
-  }
-
-  protected $seat_belt;
-  protected $window;
-
-}
-
-class Bike extends Vehicle {
-
-  function __construct(){
-    parent::__construct();
-    echo 'Initialize Bike class';
-  }
-
- protected $side_stand;
-}
-
-$bike_object = new Bike();
-echo $bike_object->accelerate();
-echo $bike_object->apply_break();
-
-$car_object = new Car();
-echo $car_object->accelerate();
-echo $car->object->apply_break();
-
-
+$balyakala_sakhi->display();
+$mathilukal->display();
 
  ?>
