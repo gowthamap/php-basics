@@ -1,19 +1,9 @@
 <?php
 
-$i=6;
-while($i<=5) {
-echo $i."<br>";
-$i++;
+$numbers = [10,20,3,5,68,50,60,50];
+
+foreach($numbers as $x) {
+  echo $x."<br>";
 }
-
-do {
-  echo $i."<br>";
-  $i++;
-}while($i<=5);
-
-for($i=1;$i<=10;$i++) {
-  echo $i."<br>";
-}
-
 
 ?>
