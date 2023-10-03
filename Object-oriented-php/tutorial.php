@@ -1,26 +1,24 @@
 <?php
 
-class Book {
-  private $title;
-  private $price;
-  private $author;
 
-  function __construct($title, $price, $author){
-    $this->title = $title;
-    $this->price = $price;
-    $this->author = $author;
+// Polymorphism in php
+// method overriding
+
+class Father {
+  protected $name;
+  public function do_magic() {
+    echo 'Magic of father';
   }
-
-  public function display() {
-    echo "Title: ".$this->title. "<br>Price :" .$this->price."<br>Author :".$this->author;
-  }
-
 }
 
-$balyakala_sakhi = new Book("Balyakala sakhi", 150, "Basheer");
-$mathilukal = new Book("mathilukal", 160, "Basheer");
+class Child extends Father {
+  public function do_magic()
+  {
+    echo 'Magic of child';
+  }
+}
 
-$balyakala_sakhi->display();
-$mathilukal->display();
+$child_ob = new Child();
+$child_ob->do_magic();
 
  ?>
