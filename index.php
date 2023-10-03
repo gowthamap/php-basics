@@ -1,22 +1,19 @@
 <?php
 
+$numbers = array(10,20);
+// echo $numbers[1];
 
-$age = 20;
-$str = "Your age is $age";
-
-$name = '\'Anoop\'';
-
-echo $str;
-
-define("PI", 3.14);
-echo PI;
+// $ar = ["name" => "Tintu", "age"=> 28, "mark"=>40];
+array_push($numbers, 30);
+array_push($numbers, 30);
+array_push($numbers, 30);
+array_push($numbers, "this is a string");
 
 
-$first_name = "Tintu";
-$middle_name = "C";
-$last_name = "Raju";
-$full_name = $first_name." ".$middle_name." ".$last_name;
-echo $first_name." ".$middle_name." ".$last_name;;
+var_dump($numbers);
 
+unset($numbers[5]);
 
- ?>
+var_dump($numbers);
+
+?>
