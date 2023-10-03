@@ -1,15 +1,18 @@
 <?php
 
-$a=4;
+$i=6;
+while($i<=5) {
+echo $i."<br>";
+$i++;
+}
 
-switch($a) {
-  case 1:  echo "Sunday";
-  break;
-  case 2: echo "Monday";
-  break;
-  case 3: echo "Tuesday";
-  break;
-  default: echo "None of the above";
+do {
+  echo $i."<br>";
+  $i++;
+}while($i<=5);
+
+for($i=1;$i<=10;$i++) {
+  echo $i."<br>";
 }
 
 
