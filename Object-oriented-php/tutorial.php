@@ -1,24 +1,39 @@
 <?php
 
+// Abstract class
 
-// Polymorphism in php
-// method overriding
-
-class Father {
+abstract class Vehicle {
   protected $name;
-  public function do_magic() {
-    echo 'Magic of father';
+  protected $color;
+
+  public function accelerate() {
+
   }
+
+  public function apply_break() {
+
+  }
+
+ abstract public function service();
+
 }
 
-class Child extends Father {
-  public function do_magic()
+
+class Car extends Vehicle {
+  public function service()
   {
-    echo 'Magic of child';
+    
   }
 }
 
-$child_ob = new Child();
-$child_ob->do_magic();
+class Bike extends Vehicle {
+  public function service()
+  {
+    
+  }
+}
+
+$ob = new Bike();
+
 
  ?>
